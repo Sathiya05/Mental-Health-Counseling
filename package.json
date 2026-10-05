@@ -1,0 +1,21 @@
+{
+  "name": "mental-health-counseling-center",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./assets/css/serenity.css -o ./assets/css/tailwind.css --minify",
+    "dev": "tailwindcss -i ./assets/css/serenity.css -o ./assets/css/tailwind.css --watch",
+    "art": "node tools/generate-art.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.17"
+  }
+}

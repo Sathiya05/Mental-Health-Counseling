@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Practice Dashboard — Serenity Demo Admin</title>
+    <meta name="description" content="Serenity demo practice dashboard — appointments, clients, therapists and simple charts." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#3F7C85" />
+    <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/tailwind.css" />
+  </head>
+  <body class="flex min-h-dvh flex-col bg-canvas font-sans text-ink">
+    <a href="#dashboard-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-serenity-600 focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white">Skip to content</a>
+
+    <div class="flex min-h-dvh flex-1 items-stretch">
+      <div data-sidebar-overlay class="fixed inset-0 z-40 hidden bg-scrim/70 backdrop-blur-[2px] lg:hidden" aria-hidden="true"></div>
+
+      <aside
+        id="dashboard-sidebar"
+        data-sidebar
+        class="dashboard-drawer fixed inset-y-0 start-0 z-50 flex w-[17rem] flex-col border-e border-ink/6 bg-surface transition-transform duration-300 ease-soft lg:sticky lg:top-0 lg:h-dvh lg:z-30"
+        aria-label="Practice dashboard navigation"
+      >
+        <div class="flex items-center justify-between gap-3 border-b border-ink/6 px-5 py-4">
+          <a href="../index.html" class="flex min-w-0 items-center gap-3 rounded-xl py-1 pr-2">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-serenity-600 shadow-soft" aria-hidden="true">
+              <svg viewBox="0 0 32 32" class="h-6 w-6" fill="none">
+                <path d="M16 4.5c4.6 2.4 7.6 6 7.6 10.2 0 4-3.2 7.3-7.6 7.3S8.4 18.7 8.4 14.7C8.4 10.5 11.4 6.9 16 4.5Z" fill="#E4D9C8"/>
+                <path d="M11.4 18.2c1.6-1.9 3.1-3 4.6-3.6M16 21.6c1.9-1.4 3.3-3.3 4.2-5.7" stroke="#3F7C85" stroke-width="1.7" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="flex min-w-0 flex-col justify-center text-left leading-tight">
+              <span class="font-display text-lg font-semibold leading-none tracking-[-0.02em] text-ink">Serenity</span>
+              <span class="mt-1 whitespace-nowrap text-[0.6rem] font-semibold uppercase leading-none tracking-[0.2em] text-ink/55">Mental Health Counseling</span>
+            </span>
+          </a>
+          <button type="button" data-sidebar-close class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-ink/10 text-ink/70 transition-colors duration-300 hover:border-serenity-600/40 hover:text-serenity-700 lg:hidden" aria-label="Close dashboard menu" aria-controls="dashboard-sidebar">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+
+        <div class="border-b border-ink/6 px-5 py-4">
+          <p class="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-serenity-700">Practice admin</p>
+          <p class="mt-1.5 font-display text-[1.05rem] font-semibold">Priya Nair</p>
+          <p class="mt-0.5 text-[0.75rem] text-ink/55">Center coordinator · demo</p>
+        </div>
+
+        <nav class="no-scrollbar flex-1 overflow-y-auto p-4">
+          <ul class="space-y-1">
+            <li>
+              <button type="button" data-view-link="overview" class="flex w-full items-center gap-3 rounded-xl bg-serenity-50 px-3.5 py-2.5 text-left text-[0.88rem] font-semibold text-serenity-800 transition-colors duration-200">
+                <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5h16M6.5 19.5V11M11.5 19.5V5.5M16.5 19.5v-5.5"/></svg>
+                Overview
+              </button>
+            </li>
+            <li>
+              <button type="button" data-view-link="appointments" class="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-left text-[0.88rem] font-medium text-ink/75 transition-colors duration-200 hover:bg-sand-50">
+                <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.6" y="5" width="16.8" height="15.4" rx="2.6"/><path d="M3.6 9.8h16.8M8.4 3.4v3.2M15.6 3.4v3.2"/></svg>
+                Appointments
+              </button>
+            </li>
+            <li>
+              <button type="button" data-view-link="clients" class="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-left text-[0.88rem] font-medium text-ink/75 transition-colors duration-200 hover:bg-sand-50">
+                <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8.4" r="3.4"/><path d="M3 19.8a6 6 0 0 1 12 0"/><path d="M16 5.6a3.4 3.4 0 0 1 0 6.4M17.4 14.6a6 6 0 0 1 3.6 5.2"/></svg>
+                Clients
+              </button>
+            </li>
+            <li>
+              <button type="button" data-view-link="therapists" class="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-left text-[0.88rem] font-medium text-ink/75 transition-colors duration-200 hover:bg-sand-50">
+                <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4.2a3.4 3.4 0 0 1 3.4 3.4c0 1.3-.7 2.4-1.8 3v2.2h-3.2v-2.2a3.4 3.4 0 0 1-1.8-3A3.4 3.4 0 0 1 12 4.2Z"/><path d="M8.6 17.2v-2.4h6.8v2.4M6 20.4h12"/></svg>
+                Therapists
+              </button>
+            </li>
+            <li>
+              <button type="button" data-view-link="reports" class="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-left text-[0.88rem] font-medium text-ink/75 transition-colors duration-200 hover:bg-sand-50">
+                <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3.6h8.4L19 8.2v12.2H6z"/><path d="M14 3.6v4.6h4.8M9 13.4h6M9 16.8h4"/></svg>
+                Reports
+              </button>
+            </li>
+          </ul>
+
+          <hr class="my-5 h-px w-full bg-ink/8" />
+
+          <a href="../login.html" class="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-left text-[0.88rem] font-medium text-ink/75 transition-colors duration-200 hover:bg-clay-500/8 hover:text-clay-600">
+            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 8V6a2 2 0 0 0-2-2H6.4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2H13a2 2 0 0 0 2-2v-2"/><path d="M10 12h10M17 9l3 3-3 3"/></svg>
+            Logout
+          </a>
+        </nav>
+
+        <div class="border-t border-ink/6 p-4">
+          <div class="grid grid-cols-2 gap-2.5 lg:hidden">
+            <button type="button" data-theme-toggle class="flex items-center justify-center gap-2 rounded-xl border border-ink/10 px-3 py-2.5 text-[0.8rem] font-medium text-ink/75 transition-colors duration-300 hover:border-serenity-600/40 hover:text-serenity-700" aria-label="Toggle dark mode" aria-pressed="false">
+              <span data-icon-moon><svg viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></span>
+              <span data-icon-sun class="hidden"><svg viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg></span>
+              Theme
+            </button>
+            <button type="button" data-rtl-toggle class="flex items-center justify-center gap-2 rounded-xl border border-ink/10 px-3 py-2.5 text-[0.8rem] font-medium text-ink/75 transition-colors duration-300 hover:border-serenity-600/40 hover:text-serenity-700" aria-label="Toggle RTL layout" aria-pressed="false">
+              <svg viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12h18M3 12l4-4M3 12l4 4M21 12l-4-4M21 12l-4 4"/></svg>
+              RTL
+            </button>
+          </div>
+          <a href="../index.html" class="mt-2.5 flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-left text-[0.85rem] font-medium text-ink/75 transition-colors duration-200 hover:bg-sand-50">
+            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" data-flip-rtl><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            Back to website
+          </a>
+          <p class="mt-2.5 rounded-xl bg-raised px-3.5 py-3 text-[0.72rem] leading-relaxed text-ink/60">
+            <strong class="font-semibold text-ink/80">Demo data.</strong> Names, sessions and figures are
+            illustrative. There is no real client data, no authentication and no backend behind this page.
+          </p>
+        </div>
+      </aside>
+
+      <div class="min-w-0 flex-1">
+        <header class="sticky top-0 z-20 border-b border-ink/6 bg-sand-50/95 backdrop-blur">
+          <div class="flex items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4 lg:px-8 lg:py-5">
+            <div class="min-w-0">
+              <h1 data-view-title class="truncate font-display text-lg font-semibold tracking-[-0.02em] sm:text-2xl">Overview</h1>
+              <p data-view-subtitle class="mt-0.5 hidden truncate text-[0.78rem] text-ink/55 sm:block">Practice snapshot for this week</p>
+            </div>
+            <div class="flex shrink-0 items-center gap-2">
+              <button type="button" data-demo-action="Creating appointments is disabled in this demo build." class="btn-primary btn-sm hidden sm:inline-flex">
+                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M12 5.5v13M5.5 12h13"/></svg>
+                New appointment
+              </button>
+              <button type="button" data-theme-toggle class="hidden h-10 w-10 place-items-center rounded-xl border border-ink/10 bg-surface text-ink/70 transition-colors duration-300 hover:border-serenity-600/40 hover:text-serenity-700 lg:grid" aria-label="Toggle dark mode" aria-pressed="false">
+                <span data-icon-moon><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></span>
+                <span data-icon-sun class="hidden"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg></span>
+              </button>
+              <button type="button" data-rtl-toggle class="hidden h-10 w-10 place-items-center rounded-xl border border-ink/10 bg-surface text-ink/70 transition-colors duration-300 hover:border-serenity-600/40 hover:text-serenity-700 lg:grid" aria-label="Toggle RTL layout" aria-pressed="false">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12h18M3 12l4-4M3 12l4 4M21 12l-4-4M21 12l-4 4"/></svg>
+              </button>
+              <span data-auth-chip></span>
+              <button type="button" data-sidebar-toggle class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-ink/10 bg-surface text-ink/70 transition-colors duration-300 hover:border-serenity-600/40 hover:text-serenity-700 lg:hidden" aria-label="Open dashboard menu" aria-expanded="false" aria-controls="dashboard-sidebar">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div id="dashboard-content" class="px-4 pb-14 pt-5 sm:px-6 sm:pt-6 lg:px-8">
+          <div data-demo-banner data-guard-role="admin"></div>
+
+          <!-- ================================================ VIEW: OVERVIEW -->
+          <section data-view="overview" aria-labelledby="view-overview-title">
+            <h2 id="view-overview-title" class="sr-only">Practice overview</h2>
+
+            <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-4" data-admin-stats></div>
+
+            <div class="mt-5 grid gap-5 xl:grid-cols-3">
+              <!-- weekly load chart -->
+              <div class="rounded-2xl border border-ink/6 bg-surface p-6 shadow-card sm:p-7 xl:col-span-2">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <h3 class="text-[0.98rem] font-semibold">Sessions this week</h3>
+                    <p class="mt-1 text-[0.8rem] text-ink/55">Scheduled sessions by day</p>
+                  </div>
+                  <span class="rounded-full bg-raised px-3 py-1.5 text-[0.72rem] font-semibold text-ink/60">28 total</span>
+                </div>
+                <div data-week-chart class="mt-8 flex h-52 items-end gap-3 sm:gap-5" role="img" aria-label="Bar chart: sessions this week, Monday 6, Tuesday 5, Wednesday 7, Thursday 4, Friday 3, Saturday 2, Sunday 1."></div>
+              </div>
+
+              <!-- service mix -->
+              <div class="rounded-2xl border border-ink/6 bg-surface p-6 shadow-card sm:p-7">
+                <h3 class="text-[0.98rem] font-semibold">Service mix</h3>
+                <p class="mt-1 text-[0.8rem] text-ink/55">Share of active sessions</p>
+                <div data-service-chart class="mt-7 space-y-5"></div>
+                <button type="button" data-view-link="reports" class="btn-ghost btn-sm mt-7 w-full">See full report</button>
+              </div>
+            </div>
+
+            <div class="mt-5 grid gap-5 xl:grid-cols-3">
+              <!-- upcoming schedule -->
+              <div class="rounded-2xl border border-ink/6 bg-surface shadow-card xl:col-span-2">
+                <div class="flex items-center justify-between gap-4 border-b border-ink/6 p-6">
+                  <h3 class="text-[0.98rem] font-semibold">Today at the center</h3>
+                  <button type="button" data-view-link="appointments" class="link-teal text-[0.82rem]">
+                    All appointments
+                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6"/></svg>
+                  </button>
+                </div>
+                <div data-today-list class="divide-y divide-ink/6"></div>
+              </div>
+
+              <!-- therapist load -->
+              <div class="rounded-2xl border border-ink/6 bg-surface p-6 shadow-card sm:p-7">
+                <h3 class="text-[0.98rem] font-semibold">Therapist load</h3>
+                <p class="mt-1 text-[0.8rem] text-ink/55">Sessions booked this week</p>
+                <div data-therapist-load class="mt-6 space-y-5"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ============================================ VIEW: APPOINTMENTS -->
+          <section data-view="appointments" hidden aria-labelledby="view-admin-appointments-title">
+            <h2 id="view-admin-appointments-title" class="sr-only">Appointments</h2>
+            <div class="rounded-2xl border border-ink/6 bg-surface shadow-card">
+              <div class="flex flex-col gap-4 border-b border-ink/6 p-6 lg:flex-row lg:items-center lg:justify-between">
+                <h3 class="text-[0.98rem] font-semibold">All appointments</h3>
+                <div class="flex flex-wrap items-center gap-2">
+                  <button type="button" data-admin-filter="all" aria-pressed="true" class="rounded-full border border-serenity-600 bg-serenity-600 px-3.5 py-2 text-[0.78rem] font-semibold text-white transition-colors duration-300">All</button>
+                  <button type="button" data-admin-filter="confirmed" aria-pressed="false" class="rounded-full border border-ink/12 bg-surface px-3.5 py-2 text-[0.78rem] font-medium text-ink/75 transition-colors duration-300">Confirmed</button>
+                  <button type="button" data-admin-filter="pending" aria-pressed="false" class="rounded-full border border-ink/12 bg-surface px-3.5 py-2 text-[0.78rem] font-medium text-ink/75 transition-colors duration-300">Pending</button>
+                  <button type="button" data-admin-filter="completed" aria-pressed="false" class="rounded-full border border-ink/12 bg-surface px-3.5 py-2 text-[0.78rem] font-medium text-ink/75 transition-colors duration-300">Completed</button>
+                  <button type="button" data-admin-filter="cancelled" aria-pressed="false" class="rounded-full border border-ink/12 bg-surface px-3.5 py-2 text-[0.78rem] font-medium text-ink/75 transition-colors duration-300">Cancelled</button>
+                </div>
+              </div>
+
+              <!-- table on wide screens -->
+              <div class="hidden overflow-x-auto lg:block">
+                <table class="w-full min-w-[52rem] text-left">
+                  <caption class="sr-only">Demo appointments for the Serenity center</caption>
+                  <thead>
+                    <tr class="border-b border-ink/6 text-[0.72rem] uppercase tracking-[0.12em] text-ink/45">
+                      <th scope="col" class="px-6 py-4 font-semibold">Client</th>
+                      <th scope="col" class="px-6 py-4 font-semibold">Therapist</th>
+                      <th scope="col" class="px-6 py-4 font-semibold">Date &amp; time</th>
+                      <th scope="col" class="px-6 py-4 font-semibold">Service</th>
+                      <th scope="col" class="px-6 py-4 font-semibold">Status</th>
+                      <th scope="col" class="px-6 py-4 text-right font-semibold">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody data-appointments-table class="divide-y divide-ink/6 text-[0.86rem]"></tbody>
+                </table>
+              </div>
+
+              <!-- cards on small screens -->
+              <div data-appointments-cards class="divide-y divide-ink/6 lg:hidden"></div>
+            </div>
+          </section>
+
+          <!-- ================================================== VIEW: CLIENTS -->
+          <section data-view="clients" hidden aria-labelledby="view-clients-title">
+            <h2 id="view-clients-title" class="sr-only">Clients</h2>
+            <div class="grid gap-5 xl:grid-cols-3">
+              <div class="rounded-2xl border border-ink/6 bg-surface p-6 shadow-card sm:p-7 xl:col-span-2">
+                <div class="flex flex-col gap-3 border-b border-ink/6 pb-5 sm:flex-row sm:items-center sm:justify-between">
+                  <h3 class="text-[0.98rem] font-semibold">Client list</h3>
+                  <div data-field class="w-full sm:w-60">
+                    <label class="sr-only" for="client-search">Search clients</label>
+                    <input class="field" id="client-search" type="search" placeholder="Search by name or therapist…" />
+                  </div>
+                </div>
+                <div data-clients-list class="divide-y divide-ink/6"></div>
+              </div>
+
+              <div class="space-y-5">
+                <div class="rounded-2xl border border-ink/6 bg-surface p-6 shadow-card sm:p-7">
+                  <h3 class="text-[0.98rem] font-semibold">Add a client</h3>
+                  <p class="mt-1.5 text-[0.82rem] text-ink/55">Creates a demo record only.</p>
+                  <form class="mt-6 space-y-4" data-validate data-success="Client added to the demo list — nothing was saved to a server." novalidate>
+                    <div data-field>
+                      <label class="label" for="c-name">Full name</label>
+                      <input class="field" id="c-name" name="clientName" type="text" data-rule="name" required />
+                    </div>
+                    <div data-field>
+                      <label class="label" for="c-email">Email address</label>
+                      <input class="field" id="c-email" name="clientEmail" type="email" required />
+                    </div>
+                    <div data-field>
+                      <label class="label" for="c-therapist">Assign therapist</label>
+                      <select class="select-field" id="c-therapist" name="clientTherapist">
+                        <option>Dr. Ananya Rao</option>
+                        <option>Dr. Meera Iyer</option>
+                        <option>Dr. Arjun Menon</option>
+                        <option>Dr. Kavya Nair</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">Add Client</button>
+                  </form>
+                </div>
+
+                <div class="rounded-2xl border border-clay-500/40 bg-clay-500/6 p-6">
+                  <h3 class="text-[0.95rem] font-semibold text-clay-600">Data handling</h3>
+                  <p class="mt-2 text-[0.84rem] leading-relaxed text-clay-600">
+                    Real practices must keep client records encrypted, access-controlled and compliant with
+                    local health-data law. This demo stores nothing.
+                  </p>
+                  <a href="../contact.html" class="btn-outline btn-sm mt-4">Ask about security</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =============================================== VIEW: THERAPISTS -->
+          <section data-view="therapists" hidden aria-labelledby="view-therapists-title">
+            <h2 id="view-therapists-title" class="sr-only">Therapists</h2>
+            <div class="mb-6 rounded-2xl border border-dashed border-serenity-600/40 bg-serenity-50 p-5">
+              <p class="flex items-start gap-2.5 text-[0.84rem] leading-relaxed text-serenity-900">
+                <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><circle cx="12" cy="16.2" r="0.9" fill="currentColor"/></svg>
+                <span>Sample team data. Adding or editing therapists is disabled in this demo build.</span>
+              </p>
+            </div>
+            <div data-therapists-grid class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3"></div>
+          </section>
+
+          <!-- =================================================== VIEW: REPORTS -->
+          <section data-view="reports" hidden aria-labelledby="view-reports-title">
+            <h2 id="view-reports-title" class="sr-only">Reports</h2>
+            <div class="grid gap-5 lg:grid-cols-2">
+              <div class="rounded-2xl border border-ink/6 bg-surface p-6 shadow-card sm:p-7">
+                <h3 class="text-[0.98rem] font-semibold">Sessions by month</h3>
+                <p class="mt-1 text-[0.8rem] text-ink/55">Demo figures for 2026</p>
+                <div data-month-chart class="mt-8 flex h-56 items-end gap-3" role="img" aria-label="Bar chart of demo sessions per month, January to September."></div>
+              </div>
+
+              <div class="space-y-5">
+                <div class="rounded-2xl border border-ink/6 bg-surface p-6 shadow-card sm:p-7">
+                  <h3 class="text-[0.98rem] font-semibold">Summary</h3>
+                  <dl class="mt-5 space-y-4 text-[0.88rem]">
+                    <div class="flex items-center justify-between gap-4 border-b border-ink/6 pb-4"><dt class="text-ink/60">Total sessions (2026)</dt><dd class="font-semibold">184</dd></div>
+                    <div class="flex items-center justify-between gap-4 border-b border-ink/6 pb-4"><dt class="text-ink/60">New clients</dt><dd class="font-semibold">41</dd></div>
+                    <div class="flex items-center justify-between gap-4 border-b border-ink/6 pb-4"><dt class="text-ink/60">Returning clients</dt><dd class="font-semibold">86%</dd></div>
+                    <div class="flex items-center justify-between gap-4 border-b border-ink/6 pb-4"><dt class="text-ink/60">Online sessions</dt><dd class="font-semibold">62</dd></div>
+                    <div class="flex items-center justify-between gap-4"><dt class="text-ink/60">Average sessions per client</dt><dd class="font-semibold">7.4</dd></div>
+                  </dl>
+                </div>
+
+                <div class="rounded-2xl border border-ink/6 bg-surface p-6 shadow-card sm:p-7">
+                  <h3 class="text-[0.98rem] font-semibold">Export</h3>
+                  <p class="mt-2 text-[0.84rem] leading-relaxed text-ink/60">
+                    Downloads are disabled in this demo. A production build would produce a CSV or PDF summary.
+                  </p>
+                  <div class="mt-5 flex flex-wrap gap-2.5">
+                    <button type="button" disabled class="btn-outline btn-sm">Export CSV</button>
+                    <button type="button" disabled class="btn-ghost btn-sm">Export PDF</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin-dashboard.js"></script>
+  </body>
+</html>

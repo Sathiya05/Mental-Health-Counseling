@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+<defs>
+<filter id="grain-calm" x="0" y="0" width="100%" height="100%">
+<feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+<feColorMatrix type="saturate" values="0"/>
+<feComponentTransfer><feFuncA type="linear" slope="0.16"/></feComponentTransfer>
+</filter>
+<filter id="soft-calm" x="-25%" y="-25%" width="150%" height="150%">
+<feGaussianBlur stdDeviation="18"/>
+</filter>
+<linearGradient id="wall-calm" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#F4F0E8"/><stop offset="1" stop-color="#E7DDCE"/>
+</linearGradient>
+<linearGradient id="ray-calm" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#FFFFFF" stop-opacity="0.45"/>
+<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip-calm"><rect width="800" height="600"/></clipPath>
+</defs>
+<g clip-path="url(#clip-calm)">
+<rect width="800" height="600" fill="url(#wall-calm)"/>
+<g>
+<path d="M 500 430 v -220 a 100 100 0 0 1 200 0 v 220 Z" fill="#D5C6AF"/>
+<path d="M 509 421 v -228 a 91 91 0 0 1 182 0 v 219 Z" fill="#F7F3EC"/>
+<g stroke="#D5C6AF" stroke-width="7">
+<path d="M 600 330 v -220"/>
+<path d="M 509 263.6 h 182"/>
+</g>
+<circle cx="642" cy="206" r="24" fill="#C2AD8E" opacity="0.5"/>
+<path d="M 500 254 L 260 690 L 700 690 L 700 366 Z" fill="#FFFFFF" opacity="0.34"/>
+</g>
+<rect x="90" y="170" width="150" height="180" rx="10" fill="#FBF9F5" stroke="#C2AD8E" stroke-width="6"/>
+<path d="M 120 210 h 90 M 120 244 h 90 M 120 278 h 62" stroke="#C6DEE1" stroke-width="9" stroke-linecap="round"/>
+<g transform="translate(52,470) scale(1.1)">
+<path d="M 0 0 v -74" stroke="#7E9B85" stroke-width="5" stroke-linecap="round" fill="none"/>
+<path d="M 0 0 q 18 -16 4 -46 q -14 26 -4 46 Z"
+fill="#7E9B85" transform="translate(0,-70) rotate(-26)"/><path d="M 0 0 q 18 -16 4 -46 q -14 26 -4 46 Z"
+fill="#7E9B85" transform="translate(0,-70) rotate(26)"/><path d="M 0 0 q 15.299999999999999 -13.6 3.4 -39.1 q -11.9 22.099999999999998 -3.4 39.1 Z"
+fill="#7E9B85" transform="translate(0,-92) rotate(-12)"/><path d="M 0 0 q 15.299999999999999 -13.6 3.4 -39.1 q -11.9 22.099999999999998 -3.4 39.1 Z"
+fill="#7E9B85" transform="translate(0,-92) rotate(12)"/>
+<path d="M -30 0 h 60 l -8 54 h -44 Z" fill="#C1785C"/>
+<path d="M -32 -6 h 64 v 12 h -64 Z" rx="6" fill="#C1785C" opacity="0.85"/>
+</g>
+<ellipse cx="300" cy="552" rx="216" ry="36" fill="#C2AD8E" opacity="0.28"/>
+<g>
+<path d="M 255.8 524.6
+l 81.328 0
+l 0 22.1
+l -81.328 0 Z" fill="#2E555C" opacity="0.92"/>
+<path d="M 245.192 481.04999999999995
+q 54.808 11.232 90.168 43.056
+l 0 26
+l -90.168 0 Z" fill="#2E555C"/>
+<path d="M 330.056 412.202
+q 26 26 39 52"
+stroke="#2E555C" stroke-width="19.5" stroke-linecap="round" fill="none"/>
+<circle cx="369.05600000000004" cy="464.202"
+r="9.36" fill="#EBC9AC"/>
+<path d="M 255.8 436.07
+q 0 -48.620000000000005 44.2 -44.2
+l 44.2 0
+q 44.2 -4.420000000000001 44.2 44.2
+l 0 93.6
+l -88.4 0 Z" fill="#2E555C"/>
+<rect x="285.96" y="355.08" width="28.08" height="35.1" rx="11.232" fill="#EBC9AC"/>
+<circle cx="300" cy="327" r="39" fill="#EBC9AC"/>
+<path d="M 259.44 330.9
+a 40.56 42.900000000000006 0 0 1 81.12 0
+q -7.800000000000001 -19.5 -39 -16.38
+q -31.200000000000003 3.12 -42.120000000000005 16.38 Z" fill="#33241C"/><circle cx="300" cy="287.22" r="16.38" fill="#33241C"/>
+<circle cx="286.74" cy="328.95" r="2.925" fill="#111111" opacity="0.72"/>
+<circle cx="313.26" cy="328.95" r="2.925" fill="#111111" opacity="0.72"/>
+<path d="M 289.08 344.94 q 10.920000000000002 9.36 21.840000000000003 0"
+stroke="#111111" stroke-width="2.925" fill="none" opacity="0.5" stroke-linecap="round"/>
+</g>
+<path d="M 400 512 q 40 -18 78 -2 v 34 q -38 -16 -78 4 Z" fill="#C2AD8E"/>
+<rect y="470" width="800" height="130" fill="#EADFCF"/>
+<rect y="466" width="800" height="5" fill="#C2AD8E" opacity="0.45"/>
+<rect width="800" height="600" filter="url(#grain-calm)" opacity="0.45" style="mix-blend-mode:multiply"/>
+</g>
+</svg>

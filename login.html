@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Client Login — Serenity Mental Health Counseling Center</title>
+    <meta
+      name="description"
+      content="Sign in to the Serenity demo client portal to view appointments, messages and shared therapist notes."
+    />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#3F7C85" />
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+  </head>
+  <body class="flex min-h-dvh flex-col bg-canvas font-sans text-ink">
+    <div id="navbar" class="sticky-header-slot"></div>
+
+    <main id="main-content" class="flex flex-1 items-center bg-raised py-12 sm:py-16 lg:py-20">
+      <div class="shell w-full">
+        <div class="mx-auto grid max-w-5xl overflow-hidden rounded-4xl border border-ink/6 bg-surface shadow-card lg:grid-cols-2">
+          <!-- side panel -->
+          <div class="relative hidden overflow-hidden lg:block">
+            <img src="assets/images/login-side.jpg" alt="Illustration of a calm counseling room" class="absolute inset-0 h-full w-full object-cover" width="800" height="600" />
+            <div class="absolute inset-0 bg-gradient-to-t from-serenity-950/92 via-serenity-900/70 to-serenity-800/40"></div>
+            <div class="relative flex h-full flex-col justify-end p-10 text-white">
+              <p class="eyebrow eyebrow-light">Demo portal</p>
+              <h2 class="mt-5 text-3xl font-semibold leading-tight tracking-[-0.02em]">
+                Your sessions, notes and messages in one quiet place.
+              </h2>
+              <p class="mt-5 text-[0.92rem] leading-relaxed text-white/75">
+                Book, reschedule, review shared summaries and message your therapist between sessions.
+              </p>
+              <ul class="mt-8 space-y-3">
+                <li class="flex items-center gap-3 text-[0.88rem] text-white/80">
+                  <span class="grid h-6 w-6 place-items-center rounded-full bg-white/12" aria-hidden="true"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+                  Upcoming appointments
+                </li>
+                <li class="flex items-center gap-3 text-[0.88rem] text-white/80">
+                  <span class="grid h-6 w-6 place-items-center rounded-full bg-white/12" aria-hidden="true"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+                  Shared therapist notes
+                </li>
+                <li class="flex items-center gap-3 text-[0.88rem] text-white/80">
+                  <span class="grid h-6 w-6 place-items-center rounded-full bg-white/12" aria-hidden="true"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+                  Messages between sessions
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- form panel -->
+          <div class="p-7 sm:p-10 lg:p-12">
+            <div data-auth-chip class="mb-6"></div>
+
+            <p class="eyebrow">Client portal</p>
+            <h1 class="mt-5 font-display text-[2rem] font-semibold tracking-[-0.02em] sm:text-[2.4rem]">Welcome Back</h1>
+            <p class="mt-3 text-[0.95rem] leading-relaxed text-ink/70">
+              Sign in to view your appointments, notes and messages.
+            </p>
+
+            <form class="mt-8 grid gap-5" data-login-form novalidate>
+              <div data-field>
+                <label class="label" for="login-email">Email address</label>
+                <input
+                  class="field"
+                  id="login-email"
+                  name="email"
+                  type="email"
+                  autocomplete="username"
+                  required
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div data-field>
+                <div class="flex items-baseline justify-between gap-3">
+                  <label class="label" for="login-password">Password</label>
+                  <a href="contact.html" class="text-[0.78rem] font-semibold text-serenity-700 hover:text-serenity-500">Forgot password?</a>
+                </div>
+                <div class="relative">
+                  <input
+                    class="field pr-12"
+                    id="login-password"
+                    name="password"
+                    type="password"
+                    autocomplete="current-password"
+                    required
+                    minlength="8"
+                    placeholder="At least 8 characters"
+                  />
+                  <button
+                    type="button"
+                    data-toggle-password
+                    for="login-password"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg px-3 py-2 text-[0.75rem] font-semibold text-ink/60 transition-colors duration-300 hover:bg-raised hover:text-serenity-700"
+                  >
+                    Show
+                  </button>
+                </div>
+              </div>
+
+              <div data-field>
+                <label class="flex cursor-pointer items-center gap-3 text-[0.88rem] text-ink/75">
+                  <input class="h-4 w-4 rounded border-ink/25 text-serenity-600 focus:ring-serenity-600/30" type="checkbox" name="remember" />
+                  <span>Remember me on this device</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn-primary w-full">Login</button>
+
+              <p data-auth-status hidden class="mt-1"></p>
+            </form>
+
+            <div class="mt-8 rounded-2xl border border-dashed border-serenity-600/35 bg-serenity-50 p-5">
+              <h2 class="text-[0.9rem] font-semibold text-serenity-900">Demo sign-in</h2>
+              <p class="mt-1.5 text-[0.84rem] leading-relaxed text-ink/70">
+                This front-end demo has no backend and no real authentication. Enter any valid email with a
+                password of at least 8 characters. Use an email beginning with
+                <strong>admin</strong> to open the practice dashboard.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <button type="button" data-demo-fill="alex@example.com" class="rounded-full border border-serenity-600/30 bg-surface px-3 py-1.5 text-[0.75rem] font-semibold text-serenity-800 transition-colors duration-300 hover:bg-serenity-600 hover:text-white">
+                  Client demo
+                </button>
+                <button type="button" data-demo-fill="admin@serenity.demo" class="rounded-full border border-serenity-600/30 bg-surface px-3 py-1.5 text-[0.75rem] font-semibold text-serenity-800 transition-colors duration-300 hover:bg-serenity-600 hover:text-white">
+                  Admin demo
+                </button>
+              </div>
+            </div>
+
+            <p class="mt-8 text-center text-[0.88rem] text-ink/70">
+              Don't have an account?
+              <a href="book-session.html" class="font-semibold text-serenity-700 transition-colors duration-300 hover:text-serenity-500">Create an Account</a>
+            </p>
+
+            <p class="mt-6 text-center text-[0.75rem] leading-relaxed text-ink/55">
+              Serenity is not an emergency service. If you need urgent support, contact your local
+              emergency number or a crisis helpline.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Counseling Services — Serenity Mental Health Center</title>
+    <meta
+      name="description"
+      content="Individual therapy, couples therapy, anxiety and stress support, personal growth, family counseling and life transition support at Serenity."
+    />
+    <meta name="theme-color" content="#3F7C85" />
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+  </head>
+  <body class="flex min-h-dvh flex-col bg-canvas font-sans text-ink">
+    <div id="navbar" class="sticky-header-slot"></div>
+
+    <main id="main-content" class="flex-1">
+      <!-- ============================================================= PAGE HERO -->
+      <section class="relative flex min-h-[100vh] min-h-[100svh] items-center overflow-hidden bg-raised">
+        <!-- difference 1: mirrored + doubled blobs (about has single right blob) -->
+        <span class="blob -left-28 -top-28 h-80 w-80 bg-sand-200/70" aria-hidden="true"></span>
+        <span class="blob -bottom-32 -right-24 h-96 w-96 bg-serenity-200/60" aria-hidden="true"></span>
+
+        <div class="shell grid w-full min-w-0 items-center gap-8 pb-12 pt-6 sm:gap-12 sm:pb-20 sm:pt-10 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:pb-24 lg:pt-12 [&>*]:min-w-0">
+          <div data-reveal>
+            <p class="eyebrow">Services</p>
+            <h1 class="h1 mt-4 max-sm:text-[1.9rem] sm:mt-6">Counseling services designed around you</h1>
+            <p class="lede mt-4 max-w-xl sm:mt-6">
+              Six ways to work together, each grounded in evidence-informed practice and shaped by what
+              you actually need right now. Not sure which fits? We'll help you decide.
+            </p>
+            <div class="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+              <a href="book-session.html" class="btn-primary">Book a Session</a>
+              <a href="#individual-therapy" class="btn-outline">Compare Services</a>
+            </div>
+            <!-- difference 3: quick facts row (about hero has none) -->
+            <dl class="mt-6 grid max-w-md grid-cols-3 gap-3 border-t border-ink/10 pt-5 min-[400px]:gap-4 sm:mt-10 sm:gap-6 sm:pt-6">
+              <div>
+                <dt class="text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-ink/55 min-[400px]:tracking-[0.16em]">Services</dt>
+                <dd class="mt-1.5 font-display text-xl font-semibold sm:text-2xl">06</dd>
+              </div>
+              <div>
+                <dt class="text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-ink/55 min-[400px]:tracking-[0.16em]">Format</dt>
+                <dd class="mt-1.5 font-display text-xl font-semibold sm:text-2xl">50<span class="text-sm font-medium text-ink/55 sm:text-base"> min</span></dd>
+              </div>
+              <div>
+                <dt class="text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-ink/55 min-[400px]:tracking-[0.16em]">Mode</dt>
+                <dd class="mt-1.5 font-display text-xl font-semibold sm:text-2xl">In<span class="text-sm font-medium text-ink/55 sm:text-base"> + online</span></dd>
+              </div>
+            </dl>
+            <!-- difference 4: jump-to-service pills (about hero has none) -->
+            <nav aria-label="Jump to a service" class="mt-6 sm:mt-8">
+              <ul class="no-scrollbar -mx-5 flex gap-2.5 overflow-x-auto px-5 pb-2 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
+                <li><a href="#individual-therapy" class="inline-flex whitespace-nowrap rounded-full border border-ink/12 bg-surface px-3.5 py-2 text-[0.78rem] font-medium text-ink/75 transition-all duration-300 hover:border-serenity-600 hover:text-serenity-800 sm:px-4 sm:text-[0.82rem]">Individual</a></li>
+                <li><a href="#couples-therapy" class="inline-flex whitespace-nowrap rounded-full border border-ink/12 bg-surface px-3.5 py-2 text-[0.78rem] font-medium text-ink/75 transition-all duration-300 hover:border-serenity-600 hover:text-serenity-800 sm:px-4 sm:text-[0.82rem]">Couples</a></li>
+                <li><a href="#anxiety-stress" class="inline-flex whitespace-nowrap rounded-full border border-ink/12 bg-surface px-3.5 py-2 text-[0.78rem] font-medium text-ink/75 transition-all duration-300 hover:border-serenity-600 hover:text-serenity-800 sm:px-4 sm:text-[0.82rem]">Anxiety &amp; Stress</a></li>
+                <li><a href="#personal-growth" class="inline-flex whitespace-nowrap rounded-full border border-ink/12 bg-surface px-3.5 py-2 text-[0.78rem] font-medium text-ink/75 transition-all duration-300 hover:border-serenity-600 hover:text-serenity-800 sm:px-4 sm:text-[0.82rem]">Growth</a></li>
+                <li><a href="#family-counseling" class="inline-flex whitespace-nowrap rounded-full border border-ink/12 bg-surface px-3.5 py-2 text-[0.78rem] font-medium text-ink/75 transition-all duration-300 hover:border-serenity-600 hover:text-serenity-800 sm:px-4 sm:text-[0.82rem]">Family</a></li>
+                <li><a href="#life-transitions" class="inline-flex whitespace-nowrap rounded-full border border-ink/12 bg-surface px-3.5 py-2 text-[0.78rem] font-medium text-ink/75 transition-all duration-300 hover:border-serenity-600 hover:text-serenity-800 sm:px-4 sm:text-[0.82rem]">Transitions</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- same DNA as about: rounded image + floating badge, different content -->
+          <div class="relative mx-auto w-full max-w-2xl lg:max-w-none" data-reveal data-reveal-delay="120">
+            <div class="overflow-hidden rounded-4xl shadow-card">
+              <img
+                src="images\service.avif"
+                alt="A counselor and client talking calmly in a sunlit therapy room"
+                class="aspect-[16/10] w-full object-cover sm:aspect-[4/3]"
+                width="800"
+                height="600"
+                fetchpriority="high"
+              />
+            </div>
+            <!-- difference 5: services badge + availability card (about: 11 years) -->
+            <div class="absolute -bottom-4 left-4 rounded-2xl bg-serenity-600 px-4 py-3.5 text-white shadow-lift sm:-bottom-5 sm:left-5 sm:px-6 sm:py-5">
+              <p class="font-display text-2xl font-semibold sm:text-3xl">06</p>
+              <p class="mt-1 text-[0.7rem] uppercase tracking-[0.14em] text-white/70 sm:text-[0.75rem]">tailored services</p>
+            </div>
+            <div class="absolute -top-4 right-3 flex items-center gap-2.5 rounded-2xl border border-ink/6 bg-surface/95 px-3.5 py-2.5 shadow-card backdrop-blur sm:-top-5 sm:right-5 sm:gap-3 sm:px-4 sm:py-3">
+              <span class="relative flex h-2.5 w-2.5" aria-hidden="true">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sage-500/60"></span>
+                <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-sage-500"></span>
+              </span>
+              <span class="text-[0.78rem] font-semibold">Accepting new clients</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================== 1. INDIVIDUAL -->
+      <section id="individual-therapy" class="scroll-mt-24 border-t border-ink/6 bg-surface py-14 lg:py-20">
+        <div class="shell grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div class="relative" data-reveal>
+            <div class="overflow-hidden rounded-4xl bg-raised shadow-card">
+              <img src="images\individual therapy.avif" alt="Abstract illustration representing one-to-one therapy" class="aspect-[4/3] w-full object-cover" width="800" height="500" loading="lazy" />
+            </div>
+            <span class="absolute -bottom-4 -left-2 hidden rounded-full bg-serenity-600 px-5 py-2.5 text-[0.8rem] font-semibold text-white shadow-lift lg:block">
+              50 min · weekly
+            </span>
+          </div>
+          <div data-reveal data-reveal-delay="120">
+            <div class="flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-sand-200 text-serenity-700" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="8.4" r="3.8"/><path d="M4.8 20.2a7.4 7.4 0 0 1 14.4 0"/></svg>
+              </span>
+              <p class="eyebrow before:hidden">Service 01</p>
+            </div>
+            <h2 class="h2 mt-5">Individual Therapy</h2>
+            <p class="lede mt-5">
+              One-to-one counseling for whatever you are carrying — anxiety, low mood, burnout, difficult
+              relationships, or simply a sense that something has quietly shifted and you would like it to
+              shift back.
+            </p>
+
+            <div class="mt-9 grid gap-7 sm:grid-cols-2">
+              <div>
+                <h3 class="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-serenity-700">Who it may support</h3>
+                <ul class="mt-3.5 space-y-2.5 text-[0.9rem] leading-relaxed text-ink/70">
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Feeling stuck, anxious or unmotivated</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Work or study pressure and burnout</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Low self-worth or self-compassion</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-serenity-700">What sessions may involve</h3>
+                <ul class="mt-3.5 space-y-2.5 text-[0.9rem] leading-relaxed text-ink/70">
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Untangling recurring patterns</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Practical tools for difficult days</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Reviewing progress every few weeks</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a href="book-session.html" class="btn-primary">Book a Session</a>
+              <a href="therapists.html" class="btn-outline">Find a Therapist</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================== 2. COUPLES -->
+      <section id="couples-therapy" class="scroll-mt-24 border-t border-ink/6 bg-raised py-14 lg:py-20">
+        <div class="shell grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div class="order-2 lg:order-1" data-reveal>
+            <div class="flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-surface text-serenity-700 shadow-soft" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="9" cy="8.6" r="3.4"/><circle cx="17" cy="9.6" r="2.8"/><path d="M3.4 20a5.8 5.8 0 0 1 11.2 0M15 20a4.6 4.6 0 0 1 5.4-3.6"/></svg>
+              </span>
+              <p class="eyebrow before:hidden">Service 02</p>
+            </div>
+            <h2 class="h2 mt-5">Couples Therapy</h2>
+            <p class="lede mt-5">
+              A structured, balanced space for two people who want to understand each other better — whether
+              you are in crisis, considering a change, or simply stuck in the same argument.
+            </p>
+
+            <div class="mt-9 grid gap-7 sm:grid-cols-2">
+              <div>
+                <h3 class="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-serenity-700">Who it may support</h3>
+                <ul class="mt-3.5 space-y-2.5 text-[0.9rem] leading-relaxed text-ink/70">
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Recurring conflict or communication breakdown</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Rebuilding trust after distance</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Navigating a major life change together</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-serenity-700">What sessions may involve</h3>
+                <ul class="mt-3.5 space-y-2.5 text-[0.9rem] leading-relaxed text-ink/70">
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>New ways of listening and responding</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Untangling expectations and unspoken needs</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Clearer decisions, together</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="mt-7 flex items-start gap-2.5 rounded-2xl bg-surface p-4 text-[0.84rem] leading-relaxed text-ink/70 shadow-soft">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><circle cx="12" cy="16.2" r="0.9" fill="currentColor"/></svg>
+              Your counselor stays neutral — the goal is mutual understanding, not winning.
+            </p>
+
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a href="book-session.html" class="btn-primary">Book a Session</a>
+              <a href="contact.html" class="btn-outline">Ask a Question</a>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2" data-reveal data-reveal-delay="120">
+            <div class="overflow-hidden rounded-4xl bg-surface shadow-card">
+              <img src="images\couple therapy.avif" alt="Abstract illustration representing couples counseling" class="aspect-[4/3] w-full object-cover" width="800" height="500" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ 3. ANXIETY & STRESS -->
+      <section id="anxiety-stress" class="scroll-mt-24 border-t border-ink/6 bg-surface py-14 lg:py-20">
+        <div class="shell grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div class="relative" data-reveal>
+            <div class="overflow-hidden rounded-4xl bg-raised shadow-card">
+              <img src="images\personal.avif" alt="Abstract illustration representing stress and anxiety support" class="aspect-[4/3] w-full object-cover" width="800" height="500" loading="lazy" />
+            </div>
+            <span class="absolute -bottom-4 -right-2 hidden rounded-full bg-sand-200 px-5 py-2.5 text-[0.8rem] font-semibold text-serenity-900 shadow-lift lg:block">
+              Practical &amp; grounded
+            </span>
+          </div>
+          <div data-reveal data-reveal-delay="120">
+            <div class="flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-sand-200 text-serenity-700" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3.6 9h9.2a3.4 3.4 0 1 0-3.4-3.4"/><path d="M3.6 13.4h12.2a3.4 3.4 0 1 1-3.4 3.4"/></svg>
+              </span>
+              <p class="eyebrow before:hidden">Service 03</p>
+            </div>
+            <h2 class="h2 mt-5">Anxiety &amp; Stress Support</h2>
+            <p class="lede mt-5">
+              Support for the everyday kind — the racing thoughts before sleep, the tightness in the morning,
+              the feeling of always being slightly behind. Learn what is happening and what helps.
+            </p>
+
+            <div class="mt-9 grid gap-7 sm:grid-cols-2">
+              <div>
+                <h3 class="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-serenity-700">Who it may support</h3>
+                <ul class="mt-3.5 space-y-2.5 text-[0.9rem] leading-relaxed text-ink/70">
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Constant worry and busy mind</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Overwhelm and burnout</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Difficulty switching off</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-serenity-700">What sessions may involve</h3>
+                <ul class="mt-3.5 space-y-2.5 text-[0.9rem] leading-relaxed text-ink/70">
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Understanding your body's stress signals</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Grounding and pacing techniques</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Building sustainable routines</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a href="book-session.html" class="btn-primary">Book a Session</a>
+              <a href="resources.html" class="btn-outline">Read the Stress Guide</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== 4. PERSONAL GROWTH -->
+      <section id="personal-growth" class="scroll-mt-24 border-t border-ink/6 bg-raised py-14 lg:py-20">
+        <div class="shell grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div class="order-2 lg:order-1" data-reveal>
+            <div class="flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-surface text-serenity-700 shadow-soft" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 21c0-5 2.4-8.4 7.2-9.4"/><path d="M12 21c0-5-2.4-8.4-7.2-9.4"/><path d="M12 21v-7.6"/><circle cx="12" cy="9.6" r="2.6"/></svg>
+              </span>
+              <p class="eyebrow before:hidden">Service 04</p>
+            </div>
+            <h2 class="h2 mt-5">Personal Growth</h2>
+            <p class="lede mt-5">
+              Not everything that hurts needs fixing. Sometimes you simply want to understand yourself better,
+              build confidence, and change habits that no longer serve you.
+            </p>
+
+            <div class="mt-9 grid gap-7 sm:grid-cols-2">
+              <div>
+                <h3 class="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-serenity-700">Who it may support</h3>
+                <ul class="mt-3.5 space-y-2.5 text-[0.9rem] leading-relaxed text-ink/70">
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Low confidence and self-doubt</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Habits you would like to change</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Building resilience for the future</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-serenity-700">What sessions may involve</h3>
+                <ul class="mt-3.5 space-y-2.5 text-[0.9rem] leading-relaxed text-ink/70">
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Values and long-term direction</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Replacing harsh self-talk</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Small, repeatable experiments</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a href="book-session.html" class="btn-primary">Book a Session</a>
+              <a href="resources.html" class="btn-outline">Browse Growth Articles</a>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2" data-reveal data-reveal-delay="120">
+            <div class="overflow-hidden rounded-4xl bg-surface shadow-card">
+              <img src="images\stress.avif" alt="Abstract illustration representing personal growth work" class="aspect-[4/3] w-full object-cover" width="800" height="500" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================= 5. FAMILY COUNSELING -->
+      <section id="family-counseling" class="scroll-mt-24 border-t border-ink/6 bg-surface py-14 lg:py-20">
+        <div class="shell grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div class="relative" data-reveal>
+            <div class="overflow-hidden rounded-4xl bg-raised shadow-card">
+              <img src="images\family.avif" alt="Illustration of family members seated together in a counseling session" class="aspect-[4/3] w-full object-cover" width="800" height="600" loading="lazy" />
+            </div>
+            <span class="absolute -bottom-4 -left-2 hidden rounded-full bg-serenity-600 px-5 py-2.5 text-[0.8rem] font-semibold text-white shadow-lift lg:block">
+              60–90 min · per session
+            </span>
+          </div>
+          <div data-reveal data-reveal-delay="120">
+            <div class="flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-sand-200 text-serenity-700" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3.6 20.4v-2a3 3 0 0 1 3-3h3.2a3 3 0 0 1 3 3v2"/><circle cx="8.2" cy="10.4" r="2.8"/><path d="M15.4 15.4h2.6a3 3 0 0 1 3 3v2"/><circle cx="17.8" cy="11" r="2.2"/></svg>
+              </span>
+              <p class="eyebrow before:hidden">Service 05</p>
+            </div>
+            <h2 class="h2 mt-5">Family Counseling</h2>
+            <p class="lede mt-5">
+              For households navigating tension, change or distance. We work with parents, couples and adult
+              children together — or in carefully planned smaller combinations.
+            </p>
+
+            <div class="mt-9 grid gap-7 sm:grid-cols-2">
+              <div>
+                <h3 class="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-serenity-700">Who it may support</h3>
+                <ul class="mt-3.5 space-y-2.5 text-[0.9rem] leading-relaxed text-ink/70">
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Teens and parents in conflict</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Blended families and step-parenting</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Caring for an ageing parent</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-serenity-700">What sessions may involve</h3>
+                <ul class="mt-3.5 space-y-2.5 text-[0.9rem] leading-relaxed text-ink/70">
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Understanding the pattern, not just the argument</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Agreeing on how to talk at home</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Individual sessions alongside family work</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a href="book-session.html" class="btn-primary">Book a Session</a>
+              <a href="therapists.html" class="btn-outline">Find a Family Counselor</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================ 6. LIFE TRANSITIONS -->
+      <section id="life-transitions" class="scroll-mt-24 border-t border-ink/6 bg-raised py-14 lg:py-20">
+        <div class="shell grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div class="order-2 lg:order-1" data-reveal>
+            <div class="flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-surface text-serenity-700 shadow-soft" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4.6 12h14.8"/><path d="m14 7.2 4.8 4.8-4.8 4.8"/><path d="M4.6 5.6v12.8"/></svg>
+              </span>
+              <p class="eyebrow before:hidden">Service 06</p>
+            </div>
+            <h2 class="h2 mt-5">Life Transitions</h2>
+            <p class="lede mt-5">
+              Endings, beginnings and the in-between. Support for grief, relocation, separation, new
+              parenthood, career changes and everything that asks you to become someone slightly new.
+            </p>
+
+            <div class="mt-9 grid gap-7 sm:grid-cols-2">
+              <div>
+                <h3 class="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-serenity-700">Who it may support</h3>
+                <ul class="mt-3.5 space-y-2.5 text-[0.9rem] leading-relaxed text-ink/70">
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Bereavement and loss</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Relocation and new cities</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Separation and new relationships</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-serenity-700">What sessions may involve</h3>
+                <ul class="mt-3.5 space-y-2.5 text-[0.9rem] leading-relaxed text-ink/70">
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Making sense of what changed</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Keeping what matters, letting go of the rest</li>
+                  <li class="flex gap-2.5"><svg class="mt-1 h-4 w-4 shrink-0 text-serenity-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg>Steady ground for the next chapter</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a href="book-session.html" class="btn-primary">Book a Session</a>
+              <a href="contact.html" class="btn-outline">Talk It Through</a>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2" data-reveal data-reveal-delay="120">
+            <div class="overflow-hidden rounded-4xl bg-surface shadow-card">
+              <img src="images\lyf.avif" alt="Abstract illustration representing support through life transitions" class="aspect-[4/3] w-full object-cover" width="800" height="500" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================== FAQ -->
+      <section class="border-t border-ink/6 bg-surface py-14 lg:py-20">
+        <div class="shell grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div class="lg:col-span-4" data-reveal>
+            <p class="eyebrow">Choosing a service</p>
+            <h2 class="h2 mt-5">Common questions</h2>
+          </div>
+          <div class="lg:col-span-8" data-reveal data-reveal-delay="120">
+            <div data-accordion="multi" class="border-t border-ink/10">
+              <div class="acc-item">
+                <h3><button type="button" class="acc-trigger" data-accordion-trigger id="svc-t1" aria-expanded="false" aria-controls="svc-p1"><span>I'm not sure which service I need</span><span class="acc-icon" data-accordion-icon aria-hidden="true"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" focusable="false"><path d="M12 6v12M6 12h12"/></svg></span></button></h3>
+                <div id="svc-p1" class="acc-panel" role="region" aria-labelledby="svc-t1"><div><p class="pb-6 pr-12 text-[0.95rem] leading-relaxed text-ink/75">Start with individual therapy — it is the most common starting point and your counselor can shift focus as your needs become clearer. Or call us and describe what has been on your mind; we will point you in the right direction.</p></div></div>
+              </div>
+              <div class="acc-item">
+                <h3><button type="button" class="acc-trigger" data-accordion-trigger id="svc-t2" aria-expanded="false" aria-controls="svc-p2"><span>Can we switch services later?</span><span class="acc-icon" data-accordion-icon aria-hidden="true"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" focusable="false"><path d="M12 6v12M6 12h12"/></svg></span></button></h3>
+                <div id="svc-p2" class="acc-panel" role="region" aria-labelledby="svc-t2"><div><p class="pb-6 pr-12 text-[0.95rem] leading-relaxed text-ink/75">Yes. What you need often changes as you go. Moving between individual and couples work, or adding family sessions, is a normal part of counseling.</p></div></div>
+              </div>
+              <div class="acc-item">
+                <h3><button type="button" class="acc-trigger" data-accordion-trigger id="svc-t3" aria-expanded="false" aria-controls="svc-p3"><span>Are sessions available online?</span><span class="acc-icon" data-accordion-icon aria-hidden="true"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" focusable="false"><path d="M12 6v12M6 12h12"/></svg></span></button></h3>
+                <div id="svc-p3" class="acc-panel" role="region" aria-labelledby="svc-t3"><div><p class="pb-6 pr-12 text-[0.95rem] leading-relaxed text-ink/75">Every service is offered both in person at the center and online by video. You can mix the two, or change per session.</p></div></div>
+              </div>
+              <div class="acc-item">
+                <h3><button type="button" class="acc-trigger" data-accordion-trigger id="svc-t4" aria-expanded="false" aria-controls="svc-p4"><span>Do you work with adolescents?</span><span class="acc-icon" data-accordion-icon aria-hidden="true"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" focusable="false"><path d="M12 6v12M6 12h12"/></svg></span></button></h3>
+                <div id="svc-p4" class="acc-panel" role="region" aria-labelledby="svc-t4"><div><p class="pb-6 pr-12 text-[0.95rem] leading-relaxed text-ink/75">We work with young people aged 13 and above, usually alongside a parent or guardian. A consent conversation happens before the first session.</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================ CTA -->
+      <section class="section-tight bg-surface pb-16 lg:pb-24">
+        <div class="shell">
+          <div class="relative isolate overflow-hidden rounded-4xl bg-serenity-600 px-6 py-14 text-center sm:px-12" data-reveal>
+            <img src="assets/images/cta-band.jpg" alt="" class="absolute inset-0 h-full w-full object-cover opacity-45" aria-hidden="true" width="800" height="600" loading="lazy" />
+            <div class="relative">
+              <h2 class="h2 text-white">Not sure which one fits? That's fine.</h2>
+              <p class="mx-auto mt-5 max-w-xl text-[1rem] leading-relaxed text-white/80">
+                Book a general consultation and we'll help you work out the right starting point together.
+              </p>
+              <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+                <a href="book-session.html" class="btn-sand">Book a Session</a>
+                <a href="therapists.html" class="btn-ghost-light">Meet the Team</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

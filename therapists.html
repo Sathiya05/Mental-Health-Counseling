@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meet Our Therapists — Serenity Mental Health Center</title>
+    <meta
+      name="description"
+      content="Meet Serenity's counseling team — clinical psychologists, counselors and family therapists specialising in anxiety, couples, family and personal growth work."
+    />
+    <meta name="theme-color" content="#3F7C85" />
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+  </head>
+  <body class="flex min-h-dvh flex-col bg-canvas font-sans text-ink">
+    <div id="navbar" class="sticky-header-slot"></div>
+
+    <main id="main-content" class="flex-1">
+      <!-- ============================================================= PAGE HERO -->
+      <section class="relative flex min-h-[100vh] min-h-[100svh] items-center overflow-hidden bg-raised">
+        <span class="blob -right-28 -top-28 h-80 w-80 bg-sand-200/70" aria-hidden="true"></span>
+        <span class="blob -bottom-32 -left-24 h-96 w-96 bg-serenity-200/60" aria-hidden="true"></span>
+
+        <div class="shell grid w-full items-center gap-8 pb-4 pt-0 lg:grid-cols-[1.1fr_1fr] lg:gap-12">
+          <div data-reveal>
+            <p class="eyebrow">The team</p>
+            <h1 class="h1 mt-3">Meet our <span class="relative inline-block">therapists</span></h1>
+            <p class="lede mt-4 max-w-xl">
+              Qualified, warm and genuinely interested in the work. Read a few profiles, then choose the
+              person you'd feel most comfortable starting with.
+            </p>
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+              <a href="book-session.html" class="btn-primary">Book a Session</a>
+              <a href="#therapist-grid" class="btn-outline">Browse Profiles</a>
+            </div>
+            <dl class="mt-6 grid max-w-md grid-cols-3 gap-6 border-t border-ink/10 pt-4">
+              <div>
+                <dt class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-ink/55">Counselors</dt>
+                <dd class="mt-1 font-display text-2xl font-semibold">18</dd>
+              </div>
+              <div>
+                <dt class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-ink/55">Languages</dt>
+                <dd class="mt-1 font-display text-2xl font-semibold">05</dd>
+              </div>
+              <div>
+                <dt class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-ink/55">Rating</dt>
+                <dd class="mt-1 font-display text-2xl font-semibold">4.9<span class="ml-1 align-middle text-base text-serenity-600">★</span></dd>
+              </div>
+            </dl>
+            <div class="mt-5 flex items-center gap-4">
+              <span class="flex -space-x-3" aria-hidden="true">
+                <img src="images/g1.avif" alt="" class="h-10 w-10 rounded-full border-2 border-raised object-cover" width="40" height="40" fetchpriority="high" />
+                <img src="images/g2.avif" alt="" class="h-10 w-10 rounded-full border-2 border-raised object-cover" width="40" height="40" fetchpriority="high" />
+                <img src="images/m1.avif" alt="" class="h-10 w-10 rounded-full border-2 border-raised object-cover" width="40" height="40" loading="lazy" />
+                <img src="images/w1.avif" alt="" class="h-10 w-10 rounded-full border-2 border-raised object-cover" width="40" height="40" loading="lazy" />
+              </span>
+              <p class="text-[0.85rem] leading-snug text-ink/65"><span class="font-semibold text-ink">In-person &amp; online</span><br />Tue &amp; Thu slots open this week</p>
+            </div>
+          </div>
+          <div class="relative hidden sm:block" data-reveal data-reveal-delay="120">
+            <div class="mx-auto grid max-w-[420px] grid-cols-2 gap-3">
+              <div class="overflow-hidden rounded-3xl shadow-card">
+                <img src="images/g1.avif" alt="Portrait of a Serenity therapist" class="aspect-square w-full object-cover" width="400" height="400" fetchpriority="high" />
+              </div>
+              <div class="mt-6 overflow-hidden rounded-3xl shadow-card">
+                <img src="images/w1.avif" alt="Portrait of a Serenity therapist" class="aspect-square w-full object-cover" width="400" height="400" fetchpriority="high" />
+              </div>
+              <div class="overflow-hidden rounded-3xl shadow-card">
+                <img src="images/m1.avif" alt="Portrait of a Serenity therapist" class="aspect-square w-full object-cover" width="400" height="400" loading="lazy" />
+              </div>
+              <div class="-mt-6 overflow-hidden rounded-3xl shadow-card">
+                <img src="images/g2.avif" alt="Portrait of a Serenity therapist" class="aspect-square w-full object-cover" width="400" height="400" loading="lazy" />
+              </div>
+            </div>
+            <div class="absolute -bottom-4 left-5 rounded-2xl bg-serenity-600 px-5 py-4 text-white shadow-lift">
+              <p class="font-display text-2xl font-semibold">18</p>
+              <p class="mt-0.5 text-[0.72rem] uppercase tracking-[0.14em] text-white/70">specialists to choose from</p>
+            </div>
+            <div class="absolute -top-4 right-5 flex items-center gap-3 rounded-2xl border border-ink/6 bg-surface/95 px-4 py-2.5 shadow-card backdrop-blur">
+              <span class="relative flex h-2.5 w-2.5" aria-hidden="true">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sage-500/60"></span>
+                <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-sage-500"></span>
+              </span>
+              <span class="text-[0.78rem] font-semibold">Accepting new clients</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================== FILTERS -->
+      <section class="border-b border-ink/6 bg-surface py-8">
+        <div class="shell">
+          <div data-filter-group data-filter-target="#therapist-grid">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div class="no-scrollbar -mx-5 flex gap-2.5 overflow-x-auto px-5 pb-1 sm:mx-0 sm:flex-wrap sm:px-0" role="group" aria-label="Filter therapists by specialisation">
+                <button type="button" data-filter="all" aria-pressed="true" class="shrink-0 whitespace-nowrap rounded-full border border-serenity-600 bg-serenity-600 px-4 py-2.5 text-[0.85rem] font-semibold text-white transition-colors duration-300">All</button>
+                <button type="button" data-filter="individual" aria-pressed="false" class="shrink-0 whitespace-nowrap rounded-full border border-ink/12 bg-surface px-4 py-2.5 text-[0.85rem] font-medium text-ink/75 transition-colors duration-300">Individual Therapy</button>
+                <button type="button" data-filter="couples" aria-pressed="false" class="shrink-0 whitespace-nowrap rounded-full border border-ink/12 bg-surface px-4 py-2.5 text-[0.85rem] font-medium text-ink/75 transition-colors duration-300">Couples Therapy</button>
+                <button type="button" data-filter="anxiety" aria-pressed="false" class="shrink-0 whitespace-nowrap rounded-full border border-ink/12 bg-surface px-4 py-2.5 text-[0.85rem] font-medium text-ink/75 transition-colors duration-300">Anxiety &amp; Stress</button>
+                <button type="button" data-filter="family" aria-pressed="false" class="shrink-0 whitespace-nowrap rounded-full border border-ink/12 bg-surface px-4 py-2.5 text-[0.85rem] font-medium text-ink/75 transition-colors duration-300">Family Counseling</button>
+                <button type="button" data-filter="growth" aria-pressed="false" class="shrink-0 whitespace-nowrap rounded-full border border-ink/12 bg-surface px-4 py-2.5 text-[0.85rem] font-medium text-ink/75 transition-colors duration-300">Personal Growth</button>
+              </div>
+              <p class="shrink-0 text-[0.85rem] text-ink/55" aria-live="polite">
+                <span data-filter-count>6</span> therapists shown
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================ GRID -->
+      <section class="section-tight bg-surface">
+        <div class="shell">
+          <div id="therapist-grid" class="grid gap-6 lg:grid-cols-2">
+            <!-- 1 -->
+            <article id="ananya-rao" data-tags="individual anxiety" class="card card-hover scroll-mt-28 overflow-hidden">
+              <div class="grid gap-0 sm:grid-cols-[10rem_1fr]">
+                <div class="bg-raised">
+                  <img src="images\Ananya.avif" alt="Portrait illustration of Dr. Ananya Rao" class="h-full min-h-56 w-full object-cover" width="640" height="800" loading="lazy" />
+                </div>
+                <div class="p-6 sm:p-7">
+                  <div class="flex items-start justify-between gap-4">
+                    <div>
+                      <h2 class="text-[1.15rem] font-semibold">Dr. Ananya Rao</h2>
+                      <p class="mt-1 text-[0.8rem] font-medium text-serenity-700">Clinical Psychologist</p>
+                    </div>
+                    <span class="chip shrink-0 text-[0.7rem]">11 yrs</span>
+                  </div>
+                  <ul class="mt-4 flex flex-wrap gap-2">
+                    <li class="badge bg-serenity-50 text-serenity-800">Anxiety &amp; Stress</li>
+                    <li class="badge bg-sand-200 text-ink/75">Individual</li>
+                  </ul>
+                  <p class="mt-4 text-[0.9rem] leading-relaxed text-ink/70">
+                    Ananya works mostly with adults navigating anxiety, burnout and the slow build-up of
+                    pressure. Her sessions are practical and unhurried — she will always tell you what she
+                    notices and why.
+                  </p>
+                  <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="book-session.html" class="btn-primary btn-sm">Book Session</a>
+                    <a href="#ananya-rao" class="btn-outline btn-sm">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2 -->
+            <article id="meera-krishnan" data-tags="couples growth individual" class="card card-hover scroll-mt-28 overflow-hidden">
+              <div class="grid gap-0 sm:grid-cols-[10rem_1fr]">
+                <div class="bg-raised">
+                  <img src="images\meera.avif" alt="Portrait illustration of Meera Krishnan" class="h-full min-h-56 w-full object-cover" width="640" height="800" loading="lazy" />
+                </div>
+                <div class="p-6 sm:p-7">
+                  <div class="flex items-start justify-between gap-4">
+                    <div>
+                      <h2 class="text-[1.15rem] font-semibold">Meera Krishnan</h2>
+                      <p class="mt-1 text-[0.8rem] font-medium text-serenity-700">Counseling Psychologist</p>
+                    </div>
+                    <span class="chip shrink-0 text-[0.7rem]">8 yrs</span>
+                  </div>
+                  <ul class="mt-4 flex flex-wrap gap-2">
+                    <li class="badge bg-serenity-50 text-serenity-800">Relationships</li>
+                    <li class="badge bg-sand-200 text-ink/75">Personal Growth</li>
+                  </ul>
+                  <p class="mt-4 text-[0.9rem] leading-relaxed text-ink/70">
+                    Meera supports couples and individuals through communication breakdowns, growing apart and
+                    the quieter work of rebuilding trust. Warm, direct and comfortable with hard conversations.
+                  </p>
+                  <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="book-session.html" class="btn-primary btn-sm">Book Session</a>
+                    <a href="#meera-krishnan" class="btn-outline btn-sm">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3 -->
+            <article id="arjun-menon" data-tags="couples family" class="card card-hover scroll-mt-28 overflow-hidden">
+              <div class="grid gap-0 sm:grid-cols-[10rem_1fr]">
+                <div class="bg-raised">
+                  <img src="images\arjun.avif" alt="Portrait illustration of Dr. Arjun Menon" class="h-full min-h-56 w-full object-cover" width="640" height="800" loading="lazy" />
+                </div>
+                <div class="p-6 sm:p-7">
+                  <div class="flex items-start justify-between gap-4">
+                    <div>
+                      <h2 class="text-[1.15rem] font-semibold">Dr. Arjun Menon</h2>
+                      <p class="mt-1 text-[0.8rem] font-medium text-serenity-700">Therapist</p>
+                    </div>
+                    <span class="chip shrink-0 text-[0.7rem]">14 yrs</span>
+                  </div>
+                  <ul class="mt-4 flex flex-wrap gap-2">
+                    <li class="badge bg-serenity-50 text-serenity-800">Family Counseling</li>
+                    <li class="badge bg-sand-200 text-ink/75">Couples</li>
+                  </ul>
+                  <p class="mt-4 text-[0.9rem] leading-relaxed text-ink/70">
+                    Arjun works with families and couples where tension has become structural — teens and
+                    parents, blended households, caring for an ageing relative. He is calm and quietly firm.
+                  </p>
+                  <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="book-session.html" class="btn-primary btn-sm">Book Session</a>
+                    <a href="#arjun-menon" class="btn-outline btn-sm">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4 -->
+            <article id="kavya-iyer" data-tags="growth individual" class="card card-hover scroll-mt-28 overflow-hidden">
+              <div class="grid gap-0 sm:grid-cols-[10rem_1fr]">
+                <div class="bg-raised">
+                  <img src="images\kavya.avif" alt="Portrait illustration of Kavya Iyer" class="h-full min-h-56 w-full object-cover" width="640" height="800" loading="lazy" />
+                </div>
+                <div class="p-6 sm:p-7">
+                  <div class="flex items-start justify-between gap-4">
+                    <div>
+                      <h2 class="text-[1.15rem] font-semibold">Kavya Iyer</h2>
+                      <p class="mt-1 text-[0.8rem] font-medium text-serenity-700">Senior Counselor</p>
+                    </div>
+                    <span class="chip shrink-0 text-[0.7rem]">9 yrs</span>
+                  </div>
+                  <ul class="mt-4 flex flex-wrap gap-2">
+                    <li class="badge bg-serenity-50 text-serenity-800">Life Transitions</li>
+                    <li class="badge bg-sand-200 text-ink/75">Personal Growth</li>
+                  </ul>
+                  <p class="mt-4 text-[0.9rem] leading-relaxed text-ink/70">
+                    Kavya specialises in identity, self-worth and major transitions — leaving home, changing
+                    direction, starting over. She creates a lot of room for people to think out loud.
+                  </p>
+                  <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="book-session.html" class="btn-primary btn-sm">Book Session</a>
+                    <a href="#kavya-iyer" class="btn-outline btn-sm">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5 -->
+            <article id="rahul-desai" data-tags="individual anxiety growth" class="card card-hover scroll-mt-28 overflow-hidden">
+              <div class="grid gap-0 sm:grid-cols-[10rem_1fr]">
+                <div class="bg-raised">
+                  <img src="images\rahul.avif" alt="Portrait illustration of Rahul Desai" class="h-full min-h-56 w-full object-cover" width="640" height="800" loading="lazy" />
+                </div>
+                <div class="p-6 sm:p-7">
+                  <div class="flex items-start justify-between gap-4">
+                    <div>
+                      <h2 class="text-[1.15rem] font-semibold">Rahul Desai</h2>
+                      <p class="mt-1 text-[0.8rem] font-medium text-serenity-700">Counseling Psychologist</p>
+                    </div>
+                    <span class="chip shrink-0 text-[0.7rem]">7 yrs</span>
+                  </div>
+                  <ul class="mt-4 flex flex-wrap gap-2">
+                    <li class="badge bg-serenity-50 text-serenity-800">Burnout</li>
+                    <li class="badge bg-sand-200 text-ink/75">Anxiety &amp; Stress</li>
+                  </ul>
+                  <p class="mt-4 text-[0.9rem] leading-relaxed text-ink/70">
+                    Rahul works with professionals under sustained pressure — burnout, perfectionism and the
+                    slow erosion of work-life balance. Very grounded, slightly funny, never preachy.
+                  </p>
+                  <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="book-session.html" class="btn-primary btn-sm">Book Session</a>
+                    <a href="#rahul-desai" class="btn-outline btn-sm">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6 -->
+            <article id="leela-fernandes" data-tags="family couples" class="card card-hover scroll-mt-28 overflow-hidden">
+              <div class="grid gap-0 sm:grid-cols-[10rem_1fr]">
+                <div class="bg-raised">
+                  <img src="images\leela.avif" alt="Portrait illustration of Dr. Leela Fernandes" class="h-full min-h-56 w-full object-cover" width="640" height="800" loading="lazy" />
+                </div>
+                <div class="p-6 sm:p-7">
+                  <div class="flex items-start justify-between gap-4">
+                    <div>
+                      <h2 class="text-[1.15rem] font-semibold">Dr. Leela Fernandes</h2>
+                      <p class="mt-1 text-[0.8rem] font-medium text-serenity-700">Clinical Psychologist</p>
+                    </div>
+                    <span class="chip shrink-0 text-[0.7rem]">16 yrs</span>
+                  </div>
+                  <ul class="mt-4 flex flex-wrap gap-2">
+                    <li class="badge bg-serenity-50 text-serenity-800">Parenting</li>
+                    <li class="badge bg-sand-200 text-ink/75">Family Counseling</li>
+                  </ul>
+                  <p class="mt-4 text-[0.9rem] leading-relaxed text-ink/70">
+                    Leela supports parents through conflict with teenagers, step-family adjustment and the
+                    grief of a family changing shape. Sixteen years of practice, endless patience.
+                  </p>
+                  <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="book-session.html" class="btn-primary btn-sm">Book Session</a>
+                    <a href="#leela-fernandes" class="btn-outline btn-sm">View Profile</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p data-filter-empty hidden class="mt-10 text-center text-[0.95rem] text-ink/60">
+            No therapists match that filter yet. Try another area, or
+            <a href="contact.html" class="link-teal">ask us to match you</a>.
+          </p>
+
+          <p class="mt-10 text-center text-[0.78rem] text-ink/55">
+            Therapist profiles, photographs and availability on this demo page are illustrative sample data.
+          </p>
+        </div>
+      </section>
+
+      <!-- =================================================== HOW TO CHOOSE -->
+      <section class="border-t border-ink/6 bg-surface py-14 lg:py-20">
+        <div class="shell">
+          <div class="max-w-2xl" data-reveal>
+            <p class="eyebrow">Choosing well</p>
+            <h2 class="h2 mt-5">How to choose your therapist</h2>
+            <p class="lede mt-5">
+              Fit matters more than credentials alone. Three unhurried steps — and you can change
+              direction at any point.
+            </p>
+          </div>
+          <ol class="mt-10 grid gap-6 md:grid-cols-3">
+            <li class="card p-7" data-reveal>
+              <span class="step-dot step-dot-active">01</span>
+              <h3 class="mt-5 text-[1.05rem] font-semibold">Start with your concern</h3>
+              <p class="mt-2 text-[0.9rem] leading-relaxed text-ink/70">
+                Use the filters above — anxiety, couples, family, growth — and shortlist two or three
+                profiles that feel close to your situation.
+              </p>
+            </li>
+            <li class="card p-7" data-reveal data-reveal-delay="90">
+              <span class="step-dot step-dot-active">02</span>
+              <h3 class="mt-5 text-[1.05rem] font-semibold">Book one first session</h3>
+              <p class="mt-2 text-[0.9rem] leading-relaxed text-ink/70">
+                Treat it as a mutual introduction. Notice whether you feel heard, unrushed and clear
+                about what happens next.
+              </p>
+            </li>
+            <li class="card p-7" data-reveal data-reveal-delay="180">
+              <span class="step-dot step-dot-active">03</span>
+              <h3 class="mt-5 text-[1.05rem] font-semibold">Switch freely if needed</h3>
+              <p class="mt-2 text-[0.9rem] leading-relaxed text-ink/70">
+                No explanation owed. Tell us or
+                <a href="contact.html" class="link-teal">ask for a match</a> and we'll move you to
+                someone who fits better.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ====================================================== JOIN THE TEAM -->
+      <section class="section bg-raised">
+        <div class="shell grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div data-reveal>
+            <p class="eyebrow">Join the practice</p>
+            <h2 class="h2 mt-5">Do you counsel with us?</h2>
+            <p class="lede mt-6">
+              We keep a small team on purpose, and we invest properly in supervision, training and workload. If
+              you want to work somewhere calm and serious about the work, we'd like to hear from you.
+            </p>
+            <ul class="mt-8 space-y-3.5">
+              <li class="flex gap-3 text-[0.95rem] text-ink/70">
+                <span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-serenity-600 text-white" aria-hidden="true"><svg viewBox="0 0 24 24" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+                Weekly supervision and a protected admin slot
+              </li>
+              <li class="flex gap-3 text-[0.95rem] text-ink/70">
+                <span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-serenity-600 text-white" aria-hidden="true"><svg viewBox="0 0 24 24" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+                Caseload caps and no evening-only rotas
+              </li>
+              <li class="flex gap-3 text-[0.95rem] text-ink/70">
+                <span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-serenity-600 text-white" aria-hidden="true"><svg viewBox="0 0 24 24" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+                CPD budget and a genuinely private office
+              </li>
+            </ul>
+            <a href="contact.html" class="btn-primary mt-9">Send an Enquiry</a>
+          </div>
+          <div class="relative" data-reveal data-reveal-delay="120">
+            <div class="overflow-hidden rounded-4xl shadow-card">
+              <img src="images\img3.webp" alt="Illustration of a small group of counselors seated together" class="aspect-[4/3] w-full object-cover" width="800" height="600" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================== THERAPIST FAQ -->
+      <section class="border-t border-ink/6 bg-surface py-14 lg:py-20">
+        <div class="shell grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div class="lg:col-span-4" data-reveal>
+            <p class="eyebrow">Good to know</p>
+            <h2 class="h2 mt-5">Questions about the team</h2>
+          </div>
+          <div class="lg:col-span-8" data-reveal data-reveal-delay="120">
+            <div data-accordion="multi" class="border-t border-ink/10">
+              <div class="acc-item">
+                <h3><button type="button" class="acc-trigger" data-accordion-trigger id="th-t1" aria-expanded="false" aria-controls="th-p1"><span>Can I switch therapists later?</span><span class="acc-icon" data-accordion-icon aria-hidden="true"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" focusable="false"><path d="M12 6v12M6 12h12"/></svg></span></button></h3>
+                <div id="th-p1" class="acc-panel" role="region" aria-labelledby="th-t1"><div><p class="pb-6 pr-12 text-[0.95rem] leading-relaxed text-ink/75">Yes — it is normal and never awkward. Keep your notes and history; with your consent we brief your new therapist so you don't start from zero.</p></div></div>
+              </div>
+              <div class="acc-item">
+                <h3><button type="button" class="acc-trigger" data-accordion-trigger id="th-t2" aria-expanded="false" aria-controls="th-p2"><span>Will I see the same therapist each time?</span><span class="acc-icon" data-accordion-icon aria-hidden="true"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" focusable="false"><path d="M12 6v12M6 12h12"/></svg></span></button></h3>
+                <div id="th-p2" class="acc-panel" role="region" aria-labelledby="th-t2"><div><p class="pb-6 pr-12 text-[0.95rem] leading-relaxed text-ink/75">Yes. Continuity is the default — same person, same slot each week. If your therapist is away, we offer a carefully briefed cover or pause until they return.</p></div></div>
+              </div>
+              <div class="acc-item">
+                <h3><button type="button" class="acc-trigger" data-accordion-trigger id="th-t3" aria-expanded="false" aria-controls="th-p3"><span>Are all therapists qualified?</span><span class="acc-icon" data-accordion-icon aria-hidden="true"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" focusable="false"><path d="M12 6v12M6 12h12"/></svg></span></button></h3>
+                <div id="th-p3" class="acc-panel" role="region" aria-labelledby="th-t3"><div><p class="pb-6 pr-12 text-[0.95rem] leading-relaxed text-ink/75">Every therapist holds recognised qualifications, receives weekly supervision and works within their scope. If something sits outside it, we say so and help you find the right person.</p></div></div>
+              </div>
+              <div class="acc-item">
+                <h3><button type="button" class="acc-trigger" data-accordion-trigger id="th-t4" aria-expanded="false" aria-controls="th-p4"><span>Can I mix online and in-person sessions?</span><span class="acc-icon" data-accordion-icon aria-hidden="true"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" focusable="false"><path d="M12 6v12M6 12h12"/></svg></span></button></h3>
+                <div id="th-p4" class="acc-panel" role="region" aria-labelledby="th-t4"><div><p class="pb-6 pr-12 text-[0.95rem] leading-relaxed text-ink/75">Yes — with the same therapist. Choose per session when you book; your notes and plan carry over either way.</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================ CTA -->
+      <section class="section-tight bg-surface">
+        <div class="shell">
+          <div class="rounded-4xl bg-sand-200 px-6 py-14 text-center sm:px-12" data-reveal>
+            <h2 class="h2">Found someone you feel comfortable with?</h2>
+            <p class="mx-auto mt-5 max-w-xl text-[1rem] leading-relaxed text-ink/70">
+              Book your first session with any of our therapists — you can always change later.
+            </p>
+            <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+              <a href="book-session.html" class="btn-primary">Book a Session</a>
+              <a href="contact.html" class="btn-outline">Ask for a Match</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
