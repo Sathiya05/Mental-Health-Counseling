@@ -634,3 +634,72 @@
     transform: scaleX(-1) translateX(0.25rem);
   }
 }
+
+/* =============================================================
+   DARK MODE TEXT VISIBILITY FIXES
+   Deliberately UNLAYERED so these win over Tailwind's layered
+   utilities/components. In dark mode the serenity-700/800/900
+   tokens stay dark-teal (they double as panel backgrounds), so any
+   *text* using them is unreadable on dark surfaces — remap the
+   text usages to the light end of the ramp. Background utilities
+   (bg-serenity-*) are untouched.
+   ============================================================= */
+[data-theme='dark'] .text-serenity-700,
+[data-theme='dark'] .hover\:text-serenity-700:hover {
+  color: rgb(157 196 201);
+}
+
+[data-theme='dark'] .text-serenity-800,
+[data-theme='dark'] .hover\:text-serenity-800:hover {
+  color: rgb(198 222 225);
+}
+
+/* active dropdown item uses the !important utility in navbar.js */
+[data-theme='dark'] .\!text-serenity-800 {
+  color: rgb(198 222 225) !important;
+}
+
+[data-theme='dark'] .text-serenity-900 {
+  color: rgb(227 239 240);
+}
+
+/* cream accent (stars, footer icons, teal-card labels) must stay
+   cream in dark mode instead of going dark-slate */
+[data-theme='dark'] .text-sand-200 {
+  color: rgb(228 217 200);
+}
+
+/* component classes that bake the dark-teal text in via @apply */
+[data-theme='dark'] .nav-link:hover,
+[data-theme='dark'] .nav-link-active,
+[data-theme='dark'] .menu-item:hover,
+[data-theme='dark'] .chip,
+[data-theme='dark'] .btn-outline {
+  color: rgb(198 222 225);
+}
+
+[data-theme='dark'] .eyebrow,
+[data-theme='dark'] .link-teal,
+[data-theme='dark'] .text-link-underline,
+[data-theme='dark'] .badge-completed,
+[data-theme='dark'] .step-dot,
+[data-theme='dark'] .acc-icon {
+  color: rgb(157 196 201);
+}
+
+[data-theme='dark'] .link-teal:hover,
+[data-theme='dark'] .link-teal:focus-visible,
+[data-theme='dark'] .acc-trigger:hover {
+  color: rgb(198 222 225);
+}
+
+/* select chevron needs a lighter stroke on dark inputs */
+[data-theme='dark'] .select-field {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A8B8BA' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* selected text: dark teal highlight with near-black text is unreadable */
+[data-theme='dark'] ::selection {
+  background-color: rgb(198 222 225);
+  color: rgb(15 28 32);
+}
