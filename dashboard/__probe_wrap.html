@@ -1,0 +1,20 @@
+﻿<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body>
+<script>
+function run(){
+ try{
+  var out={innerW:innerWidth,clientW:document.documentElement.clientWidth,scrollW:document.documentElement.scrollWidth,bodyW:document.body.scrollWidth,offenders:[]};
+  var root=document.querySelector('[data-view="messages"]')||document.body;
+  root.querySelectorAll('*').forEach(function(el){
+    if(el.offsetParent===null && getComputedStyle(el).position!=='fixed') return;
+    var r=el.getBoundingClientRect();
+    if(r.right>out.clientW+1||r.width>out.clientW+1){
+      out.offenders.push({tag:el.tagName,cls:String(el.className||'').slice(0,90),w:Math.round(r.width),right:Math.round(r.right),txt:(el.textContent||'').slice(0,40)});
+    }
+  });
+  out.offenders=out.offenders.slice(0,20);
+  var pre=document.createElement('pre');pre.id='PO';pre.textContent=JSON.stringify(out,null,1);document.body.appendChild(pre);
+ }catch(e){var p=document.createElement('pre');p.id='PO';p.textContent='ERR '+e.message;document.body.appendChild(p);}
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+</script>
+</body></html>

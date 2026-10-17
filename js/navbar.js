@@ -42,7 +42,7 @@
     close: '<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>',
     moon: '<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>',
     sun: '<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>',
-    rtl: '<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12h18M3 12l4-4M3 12l4 4M21 12l-4-4M21 12l-4 4"/></svg>'
+    rtl: '<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>'
   };
 
   /* brand mark: calm wave inside a soft leaf shape */
@@ -82,7 +82,7 @@
   function desktopItem(item) {
     if (!item.children) {
       var a = isActive(item.href);
-      return '<a href="' + item.href + '" data-nav-link class="nav-link' + (a ? ' nav-link-active' : '') + '"' + (a ? ' aria-current="page"' : '') + '>' + item.label + '</a>';
+      return '<a href="' + item.href + '" data-nav-link class="nav-link h-10' + (a ? ' nav-link-active' : '') + '"' + (a ? ' aria-current="page"' : '') + '>' + item.label + '</a>';
     }
     var id = 'nav-menu-' + item.label.toLowerCase();
     var parentActive = item.children.some(function (c) {
@@ -90,7 +90,7 @@
     });
     return (
       '<div class="relative" data-dropdown>' +
-      '<button type="button" data-dropdown-trigger class="nav-link' + (parentActive ? ' nav-link-active' : '') + '"' +
+      '<button type="button" data-dropdown-trigger class="nav-link h-10' + (parentActive ? ' nav-link-active' : '') + '"' +
       ' aria-expanded="false" aria-haspopup="true" aria-controls="' + id + '"' + (parentActive ? ' aria-current="page"' : '') + '>' +
       item.label + ICON.chevronNav +
       '</button>' +
@@ -161,7 +161,7 @@
       '<div class="flex h-[4.25rem] items-center justify-between gap-3 sm:h-[4.5rem]">' +
 
       /* ---------- brand ---------- */
-      '<a href="' + BASE + 'index.html" class="group flex min-w-0 items-center gap-2.5 rounded-xl py-1 pr-2 sm:gap-3">' +
+      '<a href="' + BASE + 'index.html" class="group flex min-w-0 shrink-0 items-center gap-2.5 rounded-xl py-1 pr-2 sm:gap-3">' +
       logoMark() +
       '<span class="flex min-w-0 flex-col justify-center text-left leading-tight">' +
       '<span class="font-display text-lg font-semibold leading-none tracking-[-0.02em] text-ink">Serenity</span>' +
@@ -169,12 +169,12 @@
       '</span></a>' +
 
       /* ---------- desktop nav ---------- */
-      '<nav aria-label="Primary" class="hidden xl:flex xl:items-center xl:gap-0.5">' +
+      '<nav aria-label="Primary" class="hidden flex-1 justify-center xl:flex xl:items-center xl:gap-0.5">' +
       NAV.map(desktopItem).join('') +
       '</nav>' +
 
       /* ---------- actions (desktop only — everything lives in the hamburger below lg) ---------- */
-      '<div class="hidden items-center gap-2 sm:gap-3 xl:flex">' +
+      '<div class="hidden shrink-0 items-center gap-2 sm:gap-3 xl:flex">' +
       '<button type="button" data-theme-toggle class="grid h-10 w-10 place-items-center rounded-xl border border-ink/10 text-ink/75 transition-colors duration-300 hover:border-serenity-600/40 hover:text-serenity-700" aria-label="Toggle dark mode" aria-pressed="false">' +
       '<span data-icon-moon>' + ICON.moon + '</span>' +
       '<span data-icon-sun class="hidden">' + ICON.sun + '</span>' +
@@ -182,7 +182,8 @@
       '<button type="button" data-rtl-toggle class="grid h-10 w-10 place-items-center rounded-xl border border-ink/10 text-ink/75 transition-colors duration-300 hover:border-serenity-600/40 hover:text-serenity-700" aria-label="Toggle RTL layout" aria-pressed="false">' +
       ICON.rtl +
       '</button>' +
-      '<a href="' + BASE + 'book-session.html" class="nav-cta">Book a Session</a>' +
+      '<a href="' + BASE + 'login.html" class="inline-flex h-10 items-center justify-center rounded-full border border-serenity-600/35 px-5 text-[0.85rem] font-semibold text-serenity-800 transition-all duration-300 ease-soft hover:border-serenity-600 hover:bg-serenity-600 hover:text-white">Login</a>' +
+      '<a href="' + BASE + 'book-session.html" class="nav-cta h-10">Book a Session</a>' +
       '</div>' +
       '<div class="flex shrink-0 items-center gap-2 xl:hidden">' +
       '<button type="button" data-mobile-toggle class="grid h-11 w-11 place-items-center rounded-xl border border-ink/10 text-ink/75 transition-colors duration-300 hover:border-serenity-600/40 hover:text-serenity-700" ' +
@@ -194,15 +195,20 @@
 
       '</div></div>' +
 
-      /* ---------- mobile panel ---------- */
-      '<div id="mobile-menu" data-mobile-menu class="hidden border-t border-ink/5 bg-surface xl:hidden">' +
-      '<nav aria-label="Mobile" class="shell max-h-[calc(100dvh-4.5rem)] overflow-y-auto overscroll-contain py-4">' +
+      /* ---------- mobile panel ----------
+         absolutely positioned so opening it never adds height to the
+         in-flow sticky header (which would push the hero down) */
+      '<div id="mobile-menu" data-mobile-menu class="absolute inset-x-0 top-full z-50 hidden border-t border-ink/5 bg-surface shadow-card xl:hidden">' +
+      '<nav aria-label="Mobile" class="shell overflow-y-auto overscroll-contain py-4" style="max-height:calc(100dvh - 4.5rem)">' +
       '<div class="space-y-1">' +
       NAV.map(function (i) {
         return mobileItem(i, 0);
       }).join('') +
       '</div>' +
-      '<a href="' + BASE + 'book-session.html" data-mobile-link class="btn-primary mt-4 w-full">Book a Session</a>' +
+      '<div class="mt-4 grid gap-2.5">' +
+      '<a href="' + BASE + 'login.html" data-mobile-link class="btn-outline w-full">Login</a>' +
+      '<a href="' + BASE + 'book-session.html" data-mobile-link class="btn-primary w-full">Book a Session</a>' +
+      '</div>' +
       '<div class="mt-4 grid grid-cols-2 gap-2.5">' +
       '<button type="button" data-theme-toggle class="flex items-center justify-center gap-2 rounded-xl border border-ink/10 px-3 py-3 text-[0.85rem] font-medium text-ink/75 transition-colors duration-300 hover:border-serenity-600/40 hover:text-serenity-700" aria-label="Toggle dark mode" aria-pressed="false">' +
       '<span data-icon-moon>' + ICON.moon + '</span>' +
